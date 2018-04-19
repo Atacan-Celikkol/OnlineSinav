@@ -1,0 +1,95 @@
+﻿@using OnlineSinav.Model
+@model Exam
+
+@{
+    ViewBag.Title = "GetExam";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+    <li class="breadcrumb-item active">Sınav</li>
+</ol>
+<div class="card-group">
+    <div class="card">
+        <div class="card-body text-center">
+            <h4 class="mb-0"><strong>@Model.Questions.Count</strong></h4>
+            <small class="text-muted-light">TOPLAM</small>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <h4 class="text-success mb-0"><strong>@Session["Correct"]</strong></h4>
+            <small class="text-muted-light">DOĞRU</small>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <h4 class="text-danger mb-0"><strong>@Session["Wrong"]</strong></h4>
+            <small class="text-muted-light">YANLIŞ</small>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body text-center">
+            <h4 class="text-primary mb-0"><strong>@Session["Left"]</strong></h4>
+            <small class="text-muted-light">KALAN</small>
+        </div>
+    </div>
+</div>
+@Html.Action("BindQuestion")
+
+@section ExamSidebar{
+    <div class="mdk-drawer js-mdk-drawer" data-align="end">
+        <div class="mdk-drawer__content">
+            <div class="sidebar sidebar-right sidebar-light bg-white o-hidden">
+                <div class="sidebar-p-y" data-simplebar data-simplebar-force-enabled="true">
+                    <div class="sidebar-heading">Time left</div>
+                    <div class="countdown sidebar-p-x" data-value="@ViewBag.Time" data-unit="minute"></div>
+                    <div class="sidebar-heading">Pending</div>
+                    <ul class="list-group list-group-fit">
+                        @Html.Action("GetLeftQuestions")
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/jquery.countdown.min.js"></script>
+    <script src="~/Scripts/countdown.js"></script>
+
+    <script>
+        $("input[name='radio-stacked']").change(function () {
+            $("#btnAnswer").removeClass("disabled");
+        });
+
+        $("#btnAnswer").click(function () {
+            //var answer = $("input[name='radio-stacked']:checked");
+            //if (answer.length == 0) {
+            //    alert("Lütfen cevap veriniz");
+            //}
+            //else {
+            //    alert(answer.text());
+            //}
+
+            var answer = $("input[name='radio-stacked']:checked")[0];
+            var data = $(answer).siblings('.custom-control-description').html();
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:11608/Exam/CheckAnswer',
+                dataType: 'json',
+                data: { 'answer': data },
+                success: function (response) {
+                    if (response == "OK") {
+                        window.location.reload();
+                    }
+                },
+                error: function (err) {
+                    alert(err.statusText);
+                }
+            });
+        });
+    </script>
+}

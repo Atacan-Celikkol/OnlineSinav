@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BA4B5CA-D22D-4FA2-A412-07470C95F590}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineSinav.UI.WebMVC</RootNamespace>
+    <AssemblyName>OnlineSinav.UI.WebMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\material-design-kit.css" />
+    <Content Include="Content\css\sidebar-collapse.min.css" />
+    <Content Include="Content\css\simplebar.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\POLİNOMLAR.jpg" />
+    <Content Include="Content\img\woman-2.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\countdown.js" />
+    <Content Include="Scripts\dom-factory.js" />
+    <Content Include="Scripts\jquery.countdown.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\material-design-kit.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\sidebar-collapse.js" />
+    <Content Include="Scripts\simplebar.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\bootstrap-datepicker.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\bootstrap-timepicker.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\bootstrap-touchspin.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\datatables.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\dropzone.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\fancytree.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\fullcalendar.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\jvectormap.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\morris.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\nestable.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\nouislider.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\style.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\summernote.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\css\sweetalert.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\jquery-jvectormap-de-merc-en.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\jquery-jvectormap-es-merc-en.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\jquery-jvectormap-fr-merc-en.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\jquery-jvectormap-us-lcc-en.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\custom\mall-map.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\data\vector-maps\data\gdp-data.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\github.png" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\gulp.png" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\nodejs.png" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\110\guy-2.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\110\guy-6.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\110\guy-8.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\110\guy-9.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\110\woman-5.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\guy-2.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\guy-4.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\guy-5.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\guy-6.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\guy-7.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\guy-8.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\woman-2.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\people\50\woman-5.jpg" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\images\vuejs.png" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\chart.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\chartjs.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\colors.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\countdown.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\datatables.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\date-time.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\fancytree.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\fullcalendar.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\main.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\nestable.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\slider.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\summernote.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\sweetalert.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\touchspin.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\js\vector-maps.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\bootstrap-datepicker.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\bootstrap-timepicker.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\bootstrap.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\Chart.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\dataTables.bootstrap.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\dom-factory.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\dropzone.min.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\dropzone.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\fullcalendar.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery-jvectormap.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.bootstrap-touchspin.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.countdown.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.dataTables.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.fancytree-all.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.jvectormap.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\jquery.nestable.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\material-design-kit.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\material-design-kit.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\moment-range.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\moment.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\morris.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\nouislider.min.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\nouislider.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\popper.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\raphael.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\sidebar-collapse.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\sidebar-collapse.min.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\simplebar.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\simplebar.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\summernote.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\sweetalert.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-account-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-account.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-course-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-courses.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-dashboard.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-earnings.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-forum-thread.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-forum.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-help-center.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-invoice.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-lesson-add.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-messages.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-profile.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-quiz-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-quizzes.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-review-quiz.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-statement.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-instructor-take-course.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-account-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-billing.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-browse-courses.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-cart.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-dashboard.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-forum-thread.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-forum.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-help-center.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-invoice.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-messages.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-my-courses.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-pay.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-profile.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-quiz-results.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-take-course.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-take-quiz.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\fixed-student-view-course.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\guest-login.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\guest-signup.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\images\instructor.png" />
+    <Content Include="Template\learnplus.frontendmatter.com\images\student.png" />
+    <Content Include="Template\learnplus.frontendmatter.com\index.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-account-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-account.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-course-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-courses.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-dashboard.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-earnings.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-forum-thread.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-forum.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-help-center.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-invoice.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-lesson-add.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-messages.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-profile.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-quiz-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-quizzes.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-review-quiz.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-statement.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\instructor-take-course.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-account-edit.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-billing.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-browse-courses.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-cart.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-dashboard.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-forum-thread.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-forum.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-help-center.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-invoice.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-messages.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-my-courses.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-pay.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-profile.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-quiz-results.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-take-course.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-take-quiz.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\student-view-course.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\tutorials\data-visualization\index.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-buttons.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-calendar.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-cards.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-charts.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-forms.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-maps-vector.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-nestable.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-notifications.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-progress.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-tables.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-tabs.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\ui-tree.html" />
+    <Content Include="Template\learnplus.frontendmatter.com\vendor\adminplus.css" />
+    <Content Include="Template\learnplus.frontendmatter.com\vendor\bootstrap.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\vendor\jquery.min.js" />
+    <Content Include="Template\learnplus.frontendmatter.com\vendor\tether.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\CustomAuthorizeAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\summernoted41d.eot" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\summernotef534.eot" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\summernotef534.ttf" />
+    <Content Include="Template\learnplus.frontendmatter.com\assets\vendor\summernotef534.woff" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Exam\List.cshtml" />
+    <Content Include="Views\Exam\GetExam.cshtml" />
+    <Content Include="Views\Shared\_PartialQuestion.cshtml" />
+    <Content Include="Views\Shared\_PartialQuestionList.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineSinav.BLL\OnlineSinav.BLL.csproj">
+      <Project>{4b15c5b6-c7a1-4beb-8e2b-36ef198346bb}</Project>
+      <Name>OnlineSinav.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineSinav.Core\OnlineSinav.Core.csproj">
+      <Project>{ac0be8dc-d6c3-42d6-a03d-f140fefe1a4d}</Project>
+      <Name>OnlineSinav.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineSinav.Extensions\OnlineSinav.Extensions.csproj">
+      <Project>{47d80137-5d87-4f0b-b587-55ddec5e3844}</Project>
+      <Name>OnlineSinav.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineSinav.Model\OnlineSinav.Model.csproj">
+      <Project>{2fc61b68-6bec-4a74-b048-ea97dc4f87a2}</Project>
+      <Name>OnlineSinav.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11608</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11608/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

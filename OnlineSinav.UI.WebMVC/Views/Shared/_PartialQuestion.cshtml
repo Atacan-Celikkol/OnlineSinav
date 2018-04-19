@@ -1,0 +1,33 @@
+﻿@using OnlineSinav.Model
+@model Question
+
+<div class="card">
+    <div class="card-header bg-white">
+        <div class="media align-items-center">
+            <div class="media-left">
+                <h4 class="mb-0"><strong>#@Model.QuestionID</strong></h4>
+            </div>
+            <div class="media-body">
+                <h4 class="card-title">
+                    @Model.Text
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        @foreach (var item in Model.Choices)
+        {
+            <div class="form-group">
+                <label class="custom-control custom-radio">
+                    <input name="radio-stacked" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">@item.Text</span>
+                </label>
+            </div>
+        }
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-white">Skip</a>
+        <a href="javascript:void()" id="btnAnswer" class="btn btn-success float-right disabled">Cevapla <i class="material-icons btn__icon--right">send</i></a>
+    </div>
+</div>

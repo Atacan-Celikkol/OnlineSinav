@@ -1,0 +1,93 @@
+﻿@using OnlineSinav.UI.WebMVC.Models
+@model LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
+    <meta name="robots" content="noindex">
+    <!-- Simplebar -->
+    <link href="~/Content/css/simplebar.css" rel="stylesheet" />
+    <!-- Material Design Icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Roboto Web Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <!-- MDK -->
+    <link href="~/Content/css/material-design-kit.css" rel="stylesheet" />
+    <!-- Sidebar Collapse -->
+    <link href="~/Content/css/sidebar-collapse.min.css" rel="stylesheet" />
+    <!-- App CSS -->
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+
+
+</head>
+<body class="login">
+
+    <div class="row">
+        <div class="col-sm-8 col-md-4 col-lg-4 mx-auto">
+            <div class="text-center m-2">
+                <div class="icon-block rounded-circle">
+                    <i class="material-icons align-middle md-36 text-muted">lock</i>
+                </div>
+            </div>
+            <div class="card bg-transparent">
+                <div class="card-header bg-white text-center">
+                    <h4 class="card-title">Giriş</h4>
+                    <p class="card-subtitle">Hesap bilgilerinizi girin</p>
+                    @if (ViewBag.Message != null)
+                    {
+                        <p class="card-subtitle" style="background-color:red; color:black">@ViewBag.Message</p>
+                    }
+                </div>
+                <div class="card-body">
+
+                    @using (Html.BeginForm())
+                    {
+                        <div class="form-group">
+                            @Html.TextBoxFor(a => a.EMail, new { @class = "form-control", placeholder = "Email Adres", type = "email" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(a => a.Password, new { type = "password", @class = "form-control", placeholder = "Şifre" })
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit" class="btn  btn-primary btn-block">
+                                <span class="btn-block-text">Giriş</span>
+                            </button>
+                        </div>
+                    }
+
+                </div>
+                <div class="card-footer text-center bg-white">
+                    Hesabınız yok mu? <a href="@Url.Action("Register")">Kaydol</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Simplebar -->
+    <!-- Used for adding a custom scrollbar to the drawer -->
+    <script src="~/Scripts/simplebar.js"></script>
+    <!-- MDK -->
+    <script src="~/Scripts/dom-factory.js"></script>
+    <script src="~/Scripts/material-design-kit.js"></script>
+    <!-- Sidebar Collapse -->
+    <script src="~/Scripts/sidebar-collapse.js"></script>
+    <!-- App JS -->
+    <script src="~/Scripts/main.js"></script>
+
+
+</body>
+</html>
