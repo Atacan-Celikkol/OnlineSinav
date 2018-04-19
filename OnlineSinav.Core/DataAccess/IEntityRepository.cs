@@ -14,9 +14,7 @@ namespace OnlineSinav.Core.DataAccess
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
-        // Get metotu bize tek bir kayıt dönecek. Bu tek kayıt kimi zaman id ile bulunacak kimi zaman email ve şifreden. Hatta ilerde belki başka bir alandan. Hepsini karşılayabilmesi için LINQ sorgusu yazabileceğimiz bir tipte parametre almaktadır. Bu metodu implemente ettiğimiz class'larda içerisine lambda sorgusu yazılacak. 
-        T Get(Expression<Func<T, bool>> filter);
-        // Eğer listeleme yaparken bu filter gönderilmemişse hepsini listele, gönderilmişse de filtreleyip çıkanları listele.
+        T Get(Expression<Func<T, bool>> filter);        
         ICollection<T> GetAll(Expression<Func<T, bool>> filter = null);
     }
 }
